@@ -5,16 +5,27 @@ using UnityEngine.InputSystem;
 
 public class PlayerControls : MonoBehaviour
 {
-   [SerializeField] InputAction movement;
-   [SerializeField] InputAction fire;
-   [SerializeField] GameObject[] lasers;
-    [SerializeField] float controlSpeed = 30f;
-    [SerializeField] float xRange = 10f;
-    [SerializeField] float yRange = 10f;
+    [Header("기본 설정")]
+   
+    [Tooltip("비행선의 스피드를 조절할 수 있음")] [SerializeField] float controlSpeed = 30f;
+    [Tooltip("플레이어가 수평으로 xRange만큼 빠르게 움직임")] [SerializeField] float xRange = 10f;
+    [Tooltip("플레이어가 수직으로 yRange만큼 빠르게 움직임")] [SerializeField] float yRange = 10f;
+    [Header("레이저")]
+    [Tooltip("레이저 추가는 여기에 추가가")] [SerializeField] GameObject[] lasers;
+
+    [Header("화면 기반 조정")]
     [SerializeField] float positionPitchFactor = -2f;
     [SerializeField] float positionYawFactor = -2f;
+
+    [Header("플레이어 입력 기반 조정")]
     [SerializeField] float controlPitchFactor = -15f;
     [SerializeField] float controlRollFactor = -15f;
+
+    [Header("키 설정")]
+    [SerializeField] InputAction movement;
+    [SerializeField] InputAction fire;
+   
+    
     
     float xThrow, yThrow;
      void Start()
@@ -82,11 +93,11 @@ public class PlayerControls : MonoBehaviour
     {
         if(fire.ReadValue<float>() > 0.5)
         {
-            ActiveLasers();
+            SetLasersActive(true);
         }
         else
         {
-            DeactiveLasers();
+            SetLasersActive(false);
         }
         //  if(Input.GetButton("Fire1"))
         //  {
@@ -98,19 +109,14 @@ public class PlayerControls : MonoBehaviour
         //  }
     }
 
-    private void ActiveLasers()
+    private void SetLasersActive(bool isActive)
     {
         foreach (GameObject laser in lasers)
         {
-            laser.SetActive(true);
+            var emissionModule = laser.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = isActive;
         }
     }
 
-    void DeactiveLasers()
-    {
-        foreach (GameObject laser in lasers)
-        {
-            laser.SetActive(false);
-        }
-    }
+
 }
