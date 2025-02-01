@@ -8,16 +8,16 @@ public class ScoreBoard : MonoBehaviour
 
     void Start() 
     {
-        // scoreText.GetComponent<TMP_Text>();
+      //  scoreText.GetComponent<TMP_Text>();
         // if(scoreText != null)
-        // scoreText.text = "Start";
+       // scoreText.text = "Start";
         // Debug.Log($"{scoreText} ------");
     }
     
    public void IncreaseScore(int amountToIncrease)
    {
-        score += amountToIncrease;
+        // score += amountToIncrease;
         // if(scoreText != null)
-       // scoreText.text = score.ToString();
+      // scoreText.text = score.ToString();
    }
 }

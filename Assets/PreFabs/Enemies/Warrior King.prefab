@@ -922,6 +922,7 @@ GameObject:
   - component: {fileID: 5468297594389349424}
   - component: {fileID: 7441804395245550548}
   - component: {fileID: 6780755134438945697}
+  - component: {fileID: -8352875951909780843}
   m_Layer: 0
   m_Name: Warrior King
   m_TagString: Untagged
@@ -1010,11 +1011,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c051d19ca109e479de4b3f0542bb26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
+  deathFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   hitVFX: {fileID: 3200836327345539238, guid: 37a223a76850265499940bbcefbe1ddc, type: 3}
-  parent: {fileID: 0}
   scorePerHit: 1
   hitPoint: 20
+--- !u!65 &-8352875951909780843
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6401716226566597350}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.070741, y: 5.88792, z: 15.8964205}
+  m_Center: {x: 0, y: -0.0000010728835, z: -0.000009775161}
 --- !u!1 &6671095723075311927
 GameObject:
   m_ObjectHideFlags: 0

@@ -286,6 +286,8 @@ GameObject:
   - component: {fileID: 2635329419318715824}
   - component: {fileID: 1726466529482339763}
   - component: {fileID: 9103690099688483574}
+  - component: {fileID: 4824388382937916659}
+  - component: {fileID: 624135908495037956}
   m_Layer: 0
   m_Name: Red Storm (1)
   m_TagString: Untagged
@@ -301,14 +303,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459727103627818978}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.82431567, z: 0, w: 0.56613046}
+  m_LocalRotation: {x: 0, y: -0.824314, z: -0, w: -0.5661329}
   m_LocalPosition: {x: 75.8, y: 51.5, z: 454.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2170337621942559806}
   m_Father: {fileID: 6057640403647818430}
-  m_LocalEulerAnglesHint: {x: 360, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 360, y: 111.038, z: 0}
 --- !u!33 &2943644830428490366
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -374,7 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c051d19ca109e479de4b3f0542bb26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
+  deathFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   hitVFX: {fileID: 3200836327345539238, guid: 37a223a76850265499940bbcefbe1ddc, type: 3}
   scorePerHit: 1
   hitPoint: 4
@@ -400,6 +402,48 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &4824388382937916659
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459727103627818978}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 13.479594, y: 3.2016041, z: 10.80109}
+  m_Center: {x: 0, y: -0.026866078, z: 0.000004768372}
+--- !u!65 &624135908495037956
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459727103627818978}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 13.479594, y: 3.2016041, z: 10.80109}
+  m_Center: {x: 0, y: -0.026866078, z: 0.000004768372}
 --- !u!1 &621189359204406541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,6 +1417,8 @@ GameObject:
   - component: {fileID: 6567087238352871059}
   - component: {fileID: 3933412278437789020}
   - component: {fileID: 5172328807031808328}
+  - component: {fileID: 8449557123105607469}
+  - component: {fileID: 7418785156182367783}
   m_Layer: 0
   m_Name: Red Storm
   m_TagString: Untagged
@@ -1388,14 +1434,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590051950061242676}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.82431567, z: 0, w: 0.56613046}
+  m_LocalRotation: {x: 0, y: -0.824314, z: -0, w: -0.5661329}
   m_LocalPosition: {x: 92.6, y: 51.5, z: 441}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3402382276132796648}
   m_Father: {fileID: 6057640403647818430}
-  m_LocalEulerAnglesHint: {x: 360, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 360, y: 111.038, z: 0}
 --- !u!33 &4212534801671821446
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1461,7 +1507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c051d19ca109e479de4b3f0542bb26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
+  deathFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   hitVFX: {fileID: 3200836327345539238, guid: 37a223a76850265499940bbcefbe1ddc, type: 3}
   scorePerHit: 1
   hitPoint: 4
@@ -1487,6 +1533,48 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &8449557123105607469
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590051950061242676}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 13.479594, y: 3.2016041, z: 10.80109}
+  m_Center: {x: 0, y: -0.026866078, z: 0.000004768372}
+--- !u!65 &7418785156182367783
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590051950061242676}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 13.479594, y: 3.2016041, z: 10.80109}
+  m_Center: {x: 0, y: -0.026866078, z: 0.000004768372}
 --- !u!1 &1592867425387908194
 GameObject:
   m_ObjectHideFlags: 0
@@ -5324,6 +5412,8 @@ GameObject:
   - component: {fileID: 261977689909754478}
   - component: {fileID: 5745101753690143928}
   - component: {fileID: 4450377374981259768}
+  - component: {fileID: 933111326411639002}
+  - component: {fileID: 960230904282696320}
   m_Layer: 0
   m_Name: Red Storm (2)
   m_TagString: Untagged
@@ -5339,14 +5429,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6384767276405008377}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.82431567, z: 0, w: 0.56613046}
+  m_LocalRotation: {x: 0, y: -0.824314, z: -0, w: -0.5661329}
   m_LocalPosition: {x: 92.6, y: 51.5, z: 463.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5095605775208631579}
   m_Father: {fileID: 6057640403647818430}
-  m_LocalEulerAnglesHint: {x: 360, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 360, y: 111.038, z: 0}
 --- !u!33 &1517166098986296496
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5412,7 +5502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c051d19ca109e479de4b3f0542bb26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
+  deathFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   hitVFX: {fileID: 3200836327345539238, guid: 37a223a76850265499940bbcefbe1ddc, type: 3}
   scorePerHit: 1
   hitPoint: 4
@@ -5438,6 +5528,48 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &933111326411639002
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6384767276405008377}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 13.479594, y: 3.2016041, z: 10.80109}
+  m_Center: {x: 0, y: -0.026866078, z: 0.000004768372}
+--- !u!65 &960230904282696320
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6384767276405008377}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 13.479594, y: 3.2016041, z: 10.80109}
+  m_Center: {x: 0, y: -0.026866078, z: -0.0000104904175}
 --- !u!1 &6395128955995990757
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ using UnityEditor.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] GameObject deathVFX;
+    [SerializeField] GameObject deathFX;
     [SerializeField] GameObject hitVFX;
     
     [SerializeField] int scorePerHit = 1;
@@ -37,16 +37,19 @@ public class Enemy : MonoBehaviour
     }
 
     void ProcessHit()
-    {
+    {   
+        GameObject vfx = Instantiate(hitVFX, transform.position, quaternion.identity);
+        vfx.transform.parent = parentGameObject.transform;
         hitPoint--;
-        scoreBoard.IncreaseScore(scorePerHit);
+       
     }
 
     void KillEnemy()
     {
+         scoreBoard.IncreaseScore(scorePerHit);
         // vfx 게임 오브젝트로 저장(인스턴스화)
-        GameObject vfx = Instantiate(deathVFX, transform.position, quaternion.identity);
-        vfx.transform.parent = parentGameObject.transform;
+        GameObject fx = Instantiate(deathFX, transform.position, quaternion.identity);
+        fx.transform.parent = parentGameObject.transform;
         Destroy(gameObject);
     }
 
